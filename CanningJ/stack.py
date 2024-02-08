@@ -44,10 +44,6 @@ class Stack(object):
             ans += str(self.__stackList[i])
         ans += "]"
         return ans
-<<<<<<< HEAD
-
-
-=======
     
 def delimiter(stack: Stack, exp: str) -> None:
     # a + [b + (c+d)]
@@ -78,7 +74,6 @@ def main_delimiter() -> None:
     exp: str = "a + [b + (c+d]" 
     delimiter(stack, exp)
     
->>>>>>> e3eb63dd50713b9af9593ed70e29b29e1460e2a0
 def main() -> None:
     nrItems = 5
     stack = Stack(nrItems)
@@ -102,13 +97,8 @@ def main() -> None:
     print(f"Peeking stack: {stack.peek()}")
 
 
-<<<<<<< HEAD
-if __name__ == "__main__":
-    main()
-=======
     
     
 if __name__ == '__main__':
     # main()
     main_delimiter()
->>>>>>> e3eb63dd50713b9af9593ed70e29b29e1460e2a0
