@@ -44,8 +44,41 @@ class Stack(object):
             ans += str(self.__stackList[i])
         ans += "]"
         return ans
+<<<<<<< HEAD
 
 
+=======
+    
+def delimiter(stack: Stack, exp: str) -> None:
+    # a + [b + (c+d)]
+    # Stack: [( )
+    param_left = "{[("
+    param_right: str = ")]}"
+    paran_dict: dict[str, str]= {
+        "}" : "{" ,
+        "]" : "[" ,
+        ")" : "(" 
+        
+    }
+    for pos, char in enumerate(exp):
+        if char in param_left:
+            stack.push(char)
+        else:
+            if char in param_right:
+                tmp_paran = stack.pop()
+                if tmp_paran == paran_dict[char]:
+                    print("Paran closed")
+                else:
+                    print(f"Missing on pos {pos}")
+                
+        
+    ...
+def main_delimiter() -> None:
+    stack: Stack = Stack(10)
+    exp: str = "a + [b + (c+d]" 
+    delimiter(stack, exp)
+    
+>>>>>>> e3eb63dd50713b9af9593ed70e29b29e1460e2a0
 def main() -> None:
     nrItems = 5
     stack = Stack(nrItems)
@@ -69,5 +102,13 @@ def main() -> None:
     print(f"Peeking stack: {stack.peek()}")
 
 
+<<<<<<< HEAD
 if __name__ == "__main__":
     main()
+=======
+    
+    
+if __name__ == '__main__':
+    # main()
+    main_delimiter()
+>>>>>>> e3eb63dd50713b9af9593ed70e29b29e1460e2a0
