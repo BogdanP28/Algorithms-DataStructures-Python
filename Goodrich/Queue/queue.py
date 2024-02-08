@@ -7,7 +7,7 @@ class ArrayQueue:
 
     def __init__(self) -> None:
         # Createa a new empty queue
-        self._data = [None] * ArrayQueue.DEFAULT_CAPACITY
+        self._data: list[Any] = [None] * ArrayQueue.DEFAULT_CAPACITY
         self._size = 0
         self._front = 0
 
